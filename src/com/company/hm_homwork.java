@@ -11,21 +11,20 @@ public class hm_homwork {
             System.out.println(year + " — високосный год");
         } else {
             System.out.println(year + " - не високосный год");
-            ;
         }
     }
 
     public static void osType(int clientOS, int clientDeviceYear) {
         int currentYear = LocalDate.now().getYear();
         if (clientOS == 0) {
-            if (clientDeviceYear > currentYear) {
+            if (clientDeviceYear < currentYear) {
                 System.out.println("Вам требуется установить облегченную версию");
             } else {
                 System.out.println("Установите версию приложения для iOS по ссылке:");
             }
         }
         if (clientOS == 1) {
-            if (clientDeviceYear > currentYear) {
+            if (clientDeviceYear < currentYear) {
                 System.out.println("Вам требуется установить облегченную версию");
             } else {
                 System.out.println("Установите версию приложения для Android по ссылке:");
