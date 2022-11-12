@@ -7,7 +7,7 @@ import java.time.LocalDate;
 public class hm_homwork {
 
     public static void recognizesTheyear(int year) {
-        if (year % 4 == 0) {
+        if ((year % 4 == 0) && (year % 100 != 0) || (year % 400 == 0)) {
             System.out.println(year + " — високосный год");
         } else {
             System.out.println(year + " - не високосный год");
@@ -34,34 +34,23 @@ public class hm_homwork {
     }
 
 
-    public static int raschetDostavki(int distance) {
-        int day = 0;
-        if (distance <= 20) {
-            day++;
-        } else if (20 < distance > 60){
-//            day = day+2;
-//            System.out.println(day);
-//        }else if (60 >= distance & distance <= 100){
-//            day= day+3;
-//            System.out.println(day);
-//        }
-//        //System.out.println(day);
-    //        return day;
-        }
-        return day;
+    public static void calculateDeliveryDays  (int kilometr){
+            int rezult = 1;
+            for (int i =20; i <= kilometr; i+=40 ){
+                rezult++;
+            }
+        System.out.println(rezult);
     }
 
 
 
 
 
-
-
-
-        public static void main(String[]args){
+        public static void main (String[]args){
             recognizesTheyear(1896);
             osType(1,2020);
-            raschetDostavki(15);
+            calculateDeliveryDays(100);
+
 
 
     }
